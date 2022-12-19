@@ -1,24 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import {Download, Features, SectionWrapper} from './components'
+import assets from './assets'
+import styles from './styles/Global';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+      <>
+      <SectionWrapper 
+        title="You own store of nifty Nft, start selling and Growing"
+        description="buy, store, collect, nfts, exchange and earn crypto. Join 25 million people using ProNef Marketplace"
+        showBtn
+        mockupImg={assets.homeHero}
+        banner="banner"
+      />
+
+      <SectionWrapper 
+        title="You own store of nifty Nft, start selling and Growing"
+        description="buy, store, collect, nfts, exchange and earn crypto. Join 25 million people using ProNef Marketplace"
+        mockupImg={assets.homeCards}
+        reverse
+      />
+
+      <Features />
+
+      <SectionWrapper 
+        title="Deployment"
+        description="Kyunef built using expo which runs natively on all users devices. you can easily get your app into peoples hands"
+        showBtn
+        mockupImg={assets.feature}
+        banner="banner02"
+      />
+
+      <SectionWrapper 
+        title="Createive way to showcase the store"
+        description="THe app contains two screens. The first screen list all NFTs while the second one shows the details of a specific NFT.."
+        mockupImg={assets.mockup}
+        reverse
+      />
+
+      <Download />
+
+      <div className="px-4 py-2 justify-center items-center bg-primary flex-col text-center banner04">
+        <p className={`${styles.pText} ${styles.whiteText}`}>Made with love by {" "}
+        <span className="bold">K Yusuf Muhammad</span>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      </div>
+
+      
+
+      </>
   );
 }
 
